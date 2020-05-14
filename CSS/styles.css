@@ -7,21 +7,21 @@
 body {
   background-image: url("../img/fundo.jpg");
   background-size: 100vw 100vh;
-  font-family: Arial;
+  font-family: 'Source Code Pro', monospace;
   height: 100vh;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* Se a tela tiver pelo menos 400px (que seria um breakpoint para o site mudar o tamanho ou organização das coisas), vai carregar estes estilos */
 @media (min-width: 400px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 600px) {
   body {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 
@@ -40,7 +40,7 @@ header {
 }
 
 .menu ul {
-  display: flex;  
+  display: flex;
   justify-content: space-around;
 }
 
@@ -69,15 +69,61 @@ a:hover {
   text-align: center;
 }
 
-.site-title, {
-  text-size: 4em;
+.site-title {
+  font-family: 'VT323', monospace;
+  font-size: 3em;
 }
 
 .site-subtitle {
-  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+}
+
+.portfolio {
+  /* background-color: pink; */
+  padding: 3em;
+  height: 100vh;
+}
+
+.portfolio h2 {
+  font-family: 'Roboto', sans-serif;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 660px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(2, 240px);
+    justify-content: center;
+  }
+}
+
+@media (min-width: 940px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 240px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
 }
 
 .img-portfolio {
   height: 180px;
-  width: 180px;
+  width: 250px;
+  object-fit: cover;
+  /* object-position: bottom; */
+  /* border-radius: 10%; */
+}
+
+figcaption {
+  font-family: 'Roboto', sans-serif;
+  color: whitesmoke;
 }
