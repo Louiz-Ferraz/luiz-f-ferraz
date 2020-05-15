@@ -6,7 +6,8 @@
 
 body {
   background-image: url("../img/fundo.jpg");
-  background-size: 100vw 100vh;
+  /* background-color: lime; */
+  background-size: 100vw 100000vh;
   font-family: 'Source Code Pro', monospace;
   height: 100vh;
   font-size: 14px;
@@ -37,6 +38,7 @@ header {
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 .menu ul {
@@ -52,6 +54,12 @@ header {
   /* background-color: aqua; */
   display: block;
   padding: 10px 30px 10px 30px;
+  transition: background-color 200ms, color 200ms;
+}
+
+.menu a:hover {
+  background-color: teal;
+  color: whitesmoke;
 }
 
 a {
@@ -59,9 +67,24 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+.menu a:hover {
   text-decoration: underline;
 }
+
+/* .titulo {
+  transform: scale(0.3) translateY(50vh);
+  opacity: .5;
+  animation: .2s linear 1s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+} */
 
 .site-title,
 .site-subtitle {
@@ -78,12 +101,14 @@ a:hover {
   font-family: 'Roboto', sans-serif;
 }
 
+.contato,
 .portfolio {
   /* background-color: pink; */
   padding: 3em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
+.contato h2,
 .portfolio h2 {
   font-family: 'Roboto', sans-serif;
   color: whitesmoke;
@@ -121,9 +146,54 @@ a:hover {
   object-fit: cover;
   /* object-position: bottom; */
   /* border-radius: 10%; */
+  transition: transform 200ms;
+}
+
+.img-portfolio:active,
+.img-portfolio:hover {
+  transform: scale(1.1);
 }
 
 figcaption {
   font-family: 'Roboto', sans-serif;
   color: whitesmoke;
+}
+
+.contato {
+  min-height: 20vh;
+}
+
+.contato .grid_icons {
+  display: grid;
+  grid-template-columns: repeat(3, 75px);
+  justify-content: space-around;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 75px;
+  transition: text-shadow 150ms;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-shadow: 0px 0px 5px black;
+}
+
+@media (min-width: 560px) {
+  .contato a {
+    font-size: 100px;
+  }
+}
+
+@media (min-width: 700px) {
+  .contato a {
+    font-size: 125px;
+  }
+}
+
+@media (min-width: 900px) {
+  .contato a {
+    font-size: 150px;
+  }
 }
