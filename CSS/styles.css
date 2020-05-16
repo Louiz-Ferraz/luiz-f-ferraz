@@ -167,8 +167,9 @@ a {
 }
 
 .sobre .avatar {
-  float: inline-end;
-  margin-left: 1em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.2em;
   /* margin-top: 1em; */
 }
 
@@ -208,10 +209,10 @@ a {
 }
 
 .img-sobre {
-  height: 180px;
-  width: 250px;
-  clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 3% 50%, 25% 0%);
-}
+  height: 210px;
+  width: auto;
+  clip-path: circle(50% at 50% 50%);
+} 
 
 .img-sobre-zig {
   height: 180px;
