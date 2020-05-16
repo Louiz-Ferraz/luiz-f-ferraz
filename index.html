@@ -13,9 +13,10 @@
 </head>
 
 <body>
-  <header>
+  <header id="homepage">
     <nav class="menu">
       <ul>
+        <li><a href="#homepage" id="botao-home"><i class="fas fa-home"></i></a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#portfolio">Portfólio</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -27,25 +28,76 @@
     </div>
   </header>
 
+  <section class="sobre" id="sobre">
+    <h2>Sobre</h2>
+    <figure class="avatar">
+      <img class="img-sobre" src="https://bit.ly/2yV8Pa2" alt="Luiz Felipe Ferraz na Engenharia Química">
+    </figure>
+    <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, neque excepturi ipsa in tenetur obcaecati
+      adipisci quidem quas? Maiores atque suscipit ad at ipsam aliquam sint quas sapiente quam explicabo.</p>
+    <img class="img-sobre-zig" src="https://bit.ly/2LAm96k" alt="Luiz Felipe Ferraz na Zig">
+    <p> Accusamus, assumenda ea, maiores maxime optio quos voluptate pariatur tempore esse aliquid sit eligendi. Natus
+      similique saepe, aspernatur aperiam ullam, quasi ut officiis mollitia corporis, tempora ipsam ab non voluptatem.
+    </p>
+    <p> Accusamus, assumenda ea, maiores maxime optio quos voluptate pariatur tempore esse aliquid sit eligendi. Natus
+      similique saepe, aspernatur aperiam ullam, quasi ut officiis mollitia corporis, tempora ipsam ab non voluptatem.
+    </p>
+  </section>
+
   <section class="portfolio" id="portfolio">
     <h2>Projetos</h2>
     <div class="grid">
-      <figure>
-        <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-        <figcaption>eCommerce</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-        <figcaption>Mobile</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-        <figcaption>Web design</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
-        <figcaption>Projetos pessoais</figcaption>
-      </figure>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-frente">
+            <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
+            <figcaption>eCommerce</figcaption>
+          </figure>
+          <div class="card-tras">
+            Oi, sou a parte de trás
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-frente">
+            <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
+            <figcaption>Mobile</figcaption>
+          </figure>
+          <div class="card-tras">
+            Oi, sou a parte de trás
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-frente">
+            <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
+            <figcaption>Web design</figcaption>
+          </figure>
+          <div class="card-tras">
+            Oi, sou a parte de trás
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-frente">
+            <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg"
+              alt="Projetos pessoais">
+            <figcaption>Projetos pessoais</figcaption>
+          </figure>
+          <div class="card-tras">
+            Oi, sou a parte de trás
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 

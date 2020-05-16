@@ -53,8 +53,13 @@ header {
 .menu a {
   /* background-color: aqua; */
   display: block;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 15px 10px 15px;
   transition: background-color 200ms, color 200ms;
+}
+
+#botao-home {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .menu a:hover {
@@ -101,18 +106,49 @@ a {
   font-family: 'Roboto', sans-serif;
 }
 
+.sobre, 
 .contato,
 .portfolio {
-  /* background-color: pink; */
   padding: 3em;
   min-height: 100vh;
 }
 
+@media (min-width: 1200px) {
+  .menu ul,
+  .sobre,
+  .contato,
+  .portfolio {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sobre h2,
 .contato h2,
 .portfolio h2 {
   font-family: 'Roboto', sans-serif;
   color: whitesmoke;
   margin-bottom: 1.5em;
+}
+
+.sobre p {
+  color: white;
+  /* text-indent: 1.5em; */
+  margin-bottom: 1.4em;
+}
+
+.sobre .avatar {
+  float: inline-end;
+  margin-left: 1em;
+  /* margin-top: 1em; */
+}
+
+.sobre .img-sobre-zig {
+  float: inline-start;
+  margin-right: 1em;
+  margin-left: -0.7em;
+  margin-top: 0.5em;
 }
 
 .portfolio .grid {
@@ -140,23 +176,80 @@ a {
   text-align: center;
 }
 
-.img-portfolio {
+.img-sobre {
   height: 180px;
   width: 250px;
+  clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 3% 50%, 25% 0%);
+}
+
+.img-sobre-zig {
+  height: 180px;
+  width: 250px;
+  clip-path: polygon(85% 0, 100% 50%, 85% 100%, 6% 100%, 6% 50%, 6% 0%);
+}
+
+@media (max-width: 650px) {
+  .img-sobre {
+    height: 0;
+    width: 0;
+  }
+  
+  .img-sobre-zig {
+    height: 0;
+    width: 0;
+  }
+  
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 100%;
   object-fit: cover;
   /* object-position: bottom; */
   /* border-radius: 10%; */
   transition: transform 200ms;
 }
 
-.img-portfolio:active,
+/* .img-portfolio:active,
 .img-portfolio:hover {
   transform: scale(1.1);
-}
+} */
 
 figcaption {
   font-family: 'Roboto', sans-serif;
   color: whitesmoke;
+}
+
+.flip-card {
+  height: 180px;
+  perspective: 600px;
+}
+
+/* .flip-card:active .card, */
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-frente,
+.card-tras {
+  left: 0;
+  top: 0;
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+}
+
+.card-tras {
+  background: gray;
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
 }
 
 .contato {
