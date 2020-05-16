@@ -4,10 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: url("../img/fundo.jpg");
-  /* background-color: lime; */
-  background-size: 100vw 100000vh;
+  background-image: url("../img/fundo2.jpg");
+  /* background-color: black; */
+  background-size: 100vw 100vh;
   font-family: 'Source Code Pro', monospace;
   height: 100vh;
   font-size: 14px;
@@ -93,7 +97,7 @@ a {
 
 .site-title,
 .site-subtitle {
-  color: white;
+  color: whitesmoke;
   text-align: center;
 }
 
@@ -104,6 +108,16 @@ a {
 
 .site-subtitle {
   font-family: 'Roboto', sans-serif;
+}
+
+/* .site-subtitle:after {
+  content: "<br>👽";
+  font-size: 2em;
+} */
+
+.alien {
+  font-size: 3em;
+  text-align: center;
 }
 
 .sobre, 
@@ -130,7 +144,21 @@ a {
   font-family: 'Roboto', sans-serif;
   color: whitesmoke;
   margin-bottom: 1.5em;
+  text-align: center;
 }
+
+.sobre h2:after,
+.contato h2:after,
+.portfolio h2:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: whitesmoke;
+  background-color: lime;
+  margin: 6px auto auto auto;
+}
+
 
 .sobre p {
   color: white;
@@ -169,6 +197,9 @@ a {
     align-content: center;
     justify-content: center;
     height: calc(100vh - 8em - 48px);
+  }
+  .portfolio {
+    height: 50vh;
   }
 }
 
@@ -270,7 +301,7 @@ figcaption {
 
 .contato a:active,
 .contato a:hover {
-  text-shadow: 0px 0px 5px black;
+  text-shadow: 0px 0px 5px lime;
 }
 
 @media (min-width: 560px) {
@@ -289,4 +320,21 @@ figcaption {
   .contato a {
     font-size: 150px;
   }
+}
+
+.footer {
+  text-align: center;
+  background-color: lime;
+  padding: 10px 10px 10px 10px;
+}
+
+.footer a {
+  color: black;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: lime;
+  text-decoration: underline;
+  background-color: black;
 }
