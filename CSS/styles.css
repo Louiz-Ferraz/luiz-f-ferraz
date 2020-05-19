@@ -110,14 +110,14 @@ a {
   font-family: 'Roboto', sans-serif;
 }
 
-/* .site-subtitle:after {
-  content: "<br>👽";
-  font-size: 2em;
-} */
-
 .alien {
   font-size: 3em;
   text-align: center;
+}
+
+.alien:active,
+.alien:hover {
+  text-shadow: 0px 0px 5px lime;
 }
 
 .sobre, 
